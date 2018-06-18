@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Web service automation suite File to file comparison with Expected and Actual response">
+    <test name="Web service automation suite File to file comparison with Expected and Actual response">
+    <classes>
+        <class name="com.sudha.wsautomation.manager.Test1"></class>
+        <class name="com.sudha.wsautomation.manager.Test2"></class>
+        <class name="com.sudha.wsautomation.manager.Test3"></class>
+    </classes>
+
+    </test>
+</suite>

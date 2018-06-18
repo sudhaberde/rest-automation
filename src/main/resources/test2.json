@@ -1,0 +1,68 @@
+{
+  "description": "Get historical",
+  "host": "api.openweathermap.org",
+  "port": 80,
+  "protocol": "http",
+  "path": "data/2.5/weather",
+  "method":"GET",
+  "input":{
+    "headers":[
+      {
+        "header": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [
+      {
+        "param": "q",
+        "value": "London,uk"
+      },
+      {
+        "param": "APPID",
+        "value": "d1ed04867d9714f64e92b41a0bd707b8"
+      }
+    ],
+    "body":""
+  },
+  "output":{
+    "response-code":200,
+    "headers":[
+      {
+        "header": "Content-Type",
+        "match-type":"CONTAINS",
+        "value": "application/json"
+      },
+      {
+        "header": "Content-Length",
+        "match-type":"NON_NULL"
+      }
+    ],
+    "fields":[
+      {
+        "key":"coord/lon",
+        "match-type":"EQUALS",
+        "value":"-0.13"
+      },
+      {
+              "key":"coord/lat",
+              "match-type":"EQUALS",
+              "value":"51.51"
+            },
+      {
+        "key":"base",
+        "match-type":"EQUALS",
+        "value":"stations"
+      },
+      {
+        "key":"main/pressure",
+        "match-type":"NON_EMPTY"
+      },
+      {
+        "key":"name",
+        "match-type":"EQUALS",
+        "value":"London"
+      }
+    ]
+
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "description": "Get capital",
+  "host": "restcountries.eu",
+  "port": 443,
+  "protocol": "https",
+  "path": "rest/v2/capital/tallinn",
+  "method":"GET",
+  "input":{
+    "headers":[
+      {
+        "header": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [
+
+    ],
+    "body":""
+  },
+  "output":{
+    "response-code":200,
+    "headers":[
+      {
+        "header": "Content-Type",
+        "match-type":"CONTAINS",
+        "value": "application/json"
+      }
+    ],
+    "fields":[
+      {
+        "key":"name",
+        "match-type":"EQUALS",
+        "value":"Estonia"
+      }
+    ]
+  }
+}

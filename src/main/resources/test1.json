@@ -1,0 +1,73 @@
+{
+  "description": "Get tests",
+  "host": "api.openweathermap.org",
+  "port": 80,
+  "protocol": "http",
+  "path": "data/2.5/forecast",
+  "method":"GET",
+  "input":{
+    "headers":[
+      {
+        "header": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [
+      {
+        "param": "id",
+        "value": "524901"
+      },
+      {
+        "param": "APPID",
+        "value": "d1ed04867d9714f64e92b41a0bd707b8"
+      }
+    ],
+    "body":""
+  },
+  "output":{
+    "response-code":200,
+    "headers":[
+      {
+        "header": "Content-Type",
+        "match-type":"CONTAINS",
+        "value": "application/json"
+      },
+      {
+        "header": "Content-Length",
+        "match-type":"NON_NULL"
+      }
+    ],
+    "fields":[
+      {
+        "key":"city",
+        "match-type":"NON_NULL"
+      },
+      {
+        "key":"city/name",
+        "match-type":"EQUALS",
+        "value":"Moscow"
+      },
+      {
+        "key":"city/id",
+        "match-type":"EQUALS",
+        "value":"524901"
+      },
+      {
+        "key":"city/country",
+        "match-type":"EQUALS",
+        "value":"RU"
+      },
+      {
+        "key":"city/coord/lat",
+        "match-type":"EQUALS",
+        "value":"55.7522"
+      },
+      {
+        "key":"city/coord/lon",
+        "match-type":"EQUALS",
+        "value":"37.6156"
+      }
+    ]
+
+  }
+}
